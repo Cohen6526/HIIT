@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIIT Timer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="icons/favicon.png">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div id="mainbody">
+        <div id="currentactivity" class="labels"></div>
+        <div id="timerbox">00</div>
+        <div id="roundcounter" class="labels"></div>
+        <div id="sliders">
+            <div class="labels">Warmup</div>
+            <input type="range" min="0" max="60" class="slider" id="warmupslider" value="30">
+            <div id="warmupcounter" class="labels">30s</div>
+            <br>
+            <div class="labels">Work</div>
+            <input type="range" min="0" max="60" class="slider" id="workslider" value="30">
+            <div id="workcounter" class="labels">30s</div>
+            <br>
+            <div class="labels">Rest</div>
+            <input type="range" min="0" max="60" class="slider" id="restslider" value="30">
+            <div id="restcounter" class="labels">30s</div>
+            <br>
+            <div class="labels">Cooldown</div>
+            <input type="range" min="0" max="60" class="slider" id="cooldownslider" value="30">
+            <div id="cooldowncounter" class="labels">30s</div>
+            <br>
+            <div class="labels">Repeat</div>
+            <input type="range" min="1" max="30" class="slider" id="repeatslider" value="1">
+            <div id="repeatcounter" class="labels">1x</div>
+            <br>
+            <button type="button" onclick="start()" id="startbutton">Start Workout</button>
+        </div>
+        
+    </div>
+    <div id="savesmenu">
+        <div id="foo" onclick="menuOpen()">
+            S <br> A <br> V <br> E <br> S
+        </div>
+        <div id="saves">
+            <div id="save1" class="saves">
+                <button type="button" onclick="loadsave(1)" class="infos0">Load</button>
+                <span id="save1warmup" class ="infos1">0</span>
+                <span id="save1work" class ="infos2">0</span>
+                <span id="save1rest" class ="infos3">0</span>
+                <span id="save1repeat" class ="infos4">x0</span>
+                <span id="save1cooldown" class ="infos5">0</span>
+                <button type="button" onclick="savesave(1)"class="infos6">Save</button>
+            </div>
+            <div id="save2" class="saves">
+                <button type="button" onclick="loadsave(2)"class="infos0">Load</button>
+                <span id="save2warmup" class ="infos1">0</span>
+                <span id="save2work" class ="infos2">0</span>
+                <span id="save2rest" class ="infos3">0</span>
+                <span id="save2repeat" class ="infos4">x0</span>
+                <span id="save2cooldown" class ="infos5">0</span>
+                <button type="button" onclick="savesave(2)"class="infos6">Save</button>
+            </div>
+            <div id="save3" class="saves">
+                <button type="button" onclick="loadsave(3)"class="infos0">Load</button>
+                <span id="save3warmup" class ="infos1">0</span>
+                <span id="save3work" class ="infos2">0</span>
+                <span id="save3rest" class ="infos3">0</span>
+                <span id="save3repeat" class ="infos4">x0</span>
+                <span id="save3cooldown" class ="infos5">0</span>
+                <button type="button" onclick="savesave(3)"class="infos6">Save</button>
+            </div>
+            <div id="save4" class="saves">
+                <button type="button" onclick="loadsave(4)"class="infos0">Load</button>
+                <span id="save4warmup" class ="infos1">0</span>
+                <span id="save4work" class ="infos2">0</span>
+                <span id="save4rest" class ="infos3">0</span>
+                <span id="save4repeat" class ="infos4">x0</span>
+                <span id="save4cooldown" class ="infos5">0</span>
+                <button type="button" onclick="savesave(4)"class="infos6">Save</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

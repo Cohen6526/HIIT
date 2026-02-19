@@ -1,0 +1,215 @@
+body{
+    overflow:hidden;
+    font-family:helvetica, arial, sans-serif;
+}
+
+#mainbody{
+    height:1000px;
+}
+
+#foo{
+    display:block;
+    background-color:rgb(0, 255, 204);
+    transform:translateX(-40%);
+    position:relative;
+    height:100px;
+    border-radius:5px;
+    width:80px;
+    margin-top:auto;
+    margin-bottom:auto;
+    padding:10px;
+}
+#foo:hover{
+    background-color:rgb(11, 177, 144)
+}
+#savesmenu{
+    background-color:rgb(0, 255, 204);
+    transform:translate(101%, -1000px);
+    height:600px;
+    border-radius:5px;
+    display:block;
+}
+#saves{
+    background-color:rgb(129, 129, 129);
+    transform:translateY(-120px);
+    margin:10px;
+    height:560px;
+    border-radius:5px;
+    padding:10px;
+    width:85%
+}
+#timerbox{
+    font-size:18em;
+    text-align:center;
+}
+#sliders{
+    text-align:center;
+}
+.slider{
+    width:90%;
+}
+#roundcounter{
+    text-align:center;
+}
+#currentactivity{
+    text-align:center;
+}
+@keyframes slidein{
+    100%{
+        transform:translate(7%, -1000px);
+    }
+}
+@keyframes slideout{
+    100%{
+        transform:translate(101%, -1000px);
+    }
+}
+
+.slider {
+    -webkit-appearance: none;  /* Override default CSS styles */
+    appearance: none;
+    width: 90%; /* Full-width */
+    height: 35px; /* Specified height */
+    background: #d3d3d3; /* Grey background */
+    outline: none; /* Remove outline */
+    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    transition: opacity .2s;
+    border-radius: 5px;
+  }
+  
+  /* Mouse-over effects */
+  .slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+  }
+  
+  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none; /* Override default look */
+    appearance: none;
+    width: 35px; /* Set a specific slider handle width */
+    height: 35px; /* Slider handle height */
+    background: #04AA6D; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+    border-radius: 5px;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 35px; /* Set a specific slider handle width */
+    height: 35px; /* Slider handle height */
+    background: #04AA6D; /* Green background */
+    cursor: pointer; /* Cursor on hover */
+    border-radius: 5px;
+  }
+  #save1{
+    display:grid;
+    grid-template-columns: auto auto auto auto;
+    gap:3px;
+    padding:3px;
+  }
+  #save2{
+    display:grid;
+    grid-template-columns: auto auto auto auto;
+    gap:3px;
+    padding:3px;
+  }
+  #save3{
+    display:grid;
+    grid-template-columns: auto auto auto auto;
+    gap:3px;
+    padding:3px;
+  }
+  #save4{
+    display:grid;
+    grid-template-columns: auto auto auto auto;
+    gap:3px;
+    padding:3px;
+  }
+  .saves{
+    margin-top:5px;
+  }
+
+  .infos0{
+    grid-row-start: 1;
+    grid-row-end:4;
+    grid-column-start:1;
+    grid-column-end:3;
+    background-color: #e4e4e4;
+    font-size:3em;
+    padding:0px;
+  }
+  .infos1{
+    grid-row-start: 5;
+    grid-row-end:7;
+    background-color: #e4e4e4;
+    text-align:center;
+    font-size:3em;
+  }
+  .infos2{
+    grid-row-start: 5;
+    grid-row-end:5;
+    background-color: #e4e4e4;
+    text-align:center;
+    font-size:1.5em;
+  }
+  .infos3{
+    grid-row-start: 5;
+    grid-row-end:5;
+    background-color: #e4e4e4;
+    text-align:center;
+    font-size:1.5em;
+  }
+  .infos4{
+    grid-row-start: 6;
+    grid-row-end:6;
+    grid-column-start:2;
+    grid-column-end:4;
+    background-color: #e4e4e4;
+    text-align:center;
+    font-size:1.5em;
+  }
+  .infos5{
+    grid-row-start: 5;
+    grid-row-end:7;
+    background-color: #e4e4e4;
+    text-align:center;
+    font-size:3em;
+  }
+  .infos6{
+    grid-row-start: 1;
+    grid-row-end:4;
+    grid-column-start:3;
+    grid-column-end:5;
+    background-color: #e4e4e4;
+    font-size:3em;
+    padding:0px;
+  }
+  #saves div{
+    border-radius:5px;
+  }
+  #saves span{
+    border-radius:5px;
+  }
+  #saves button{
+    border-radius:5px;
+    background-color:#04AA6D;
+    border:none;
+
+  }
+  #saves button:hover{
+    background-color:#0b6443;
+  }
+
+  #startbutton{
+    background-color:#04AA6D;
+    color:white;
+    font-weight:bold;
+    border-radius:10px;
+    height:50px;
+    border:none;
+    width:90%;
+    font-size:2em;
+  }
+  #startbutton:hover{
+    background-color:#0b6443;
+  }
