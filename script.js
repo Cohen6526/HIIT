@@ -12,6 +12,7 @@ let currentphase = "warmup";
 let workorrest = "work";
 let counter = 0;
 
+//ZEUS, MAKE A DINGY DING SOUND WHEN IT'S GONNA CHANGE PHASES AND MY LIFE IS YOURS!!!!!!!!!!!
 
 //Sliding box code
 function menuOpen() {
@@ -158,10 +159,10 @@ async function start() {
 }
 
 //all the saving code & variables
-let save1 = {warmup: 0, work: 0, rest: 0, repeat: 0, cooldown: 0}
-let save2 = {warmup: 0, work: 0, rest: 0, repeat: 0, cooldown: 0}
-let save3 = {warmup: 0, work: 0, rest: 0, repeat: 0, cooldown: 0}
-let save4 = {warmup: 0, work: 0, rest: 0, repeat: 0, cooldown: 0}
+let save1 = {warmup: 0, work: 0, rest: 0, repeat: 1, cooldown: 0}
+let save2 = {warmup: 0, work: 0, rest: 0, repeat: 1, cooldown: 0}
+let save3 = {warmup: 0, work: 0, rest: 0, repeat: 1, cooldown: 0}
+let save4 = {warmup: 0, work: 0, rest: 0, repeat: 1, cooldown: 0}
 
 function savesave(number){
     if(number == 1){
