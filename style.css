@@ -142,7 +142,7 @@ body{
     padding:3px;
   }
   .saves{
-    margin-top:5px;
+    margin-top:15px;
   }
 
   .infos0{
@@ -151,29 +151,29 @@ body{
     grid-column-start:1;
     grid-column-end:3;
     background-color: #e4e4e4;
-    font-size:3em;
-    padding:0px;
+    color:black;
+    font-size:1.5em;
+    padding:15px;
   }
   .infos1{
     grid-row-start: 5;
     grid-row-end:7;
     background-color: #e4e4e4;
     text-align:center;
-    font-size:3em;
+    font-size:1.5em;
+    height:55px;
   }
   .infos2{
     grid-row-start: 5;
     grid-row-end:5;
     background-color: #e4e4e4;
     text-align:center;
-    font-size:1.5em;
   }
   .infos3{
     grid-row-start: 5;
     grid-row-end:5;
     background-color: #e4e4e4;
     text-align:center;
-    font-size:1.5em;
   }
   .infos4{
     grid-row-start: 6;
@@ -182,14 +182,13 @@ body{
     grid-column-end:4;
     background-color: #e4e4e4;
     text-align:center;
-    font-size:1.5em;
   }
   .infos5{
     grid-row-start: 5;
     grid-row-end:7;
     background-color: #e4e4e4;
     text-align:center;
-    font-size:3em;
+    font-size:1.5em;
   }
   .infos6{
     grid-row-start: 1;
@@ -197,8 +196,9 @@ body{
     grid-column-start:3;
     grid-column-end:5;
     background-color: #e4e4e4;
-    font-size:3em;
-    padding:0px;
+    font-size:1.5em;
+    padding:15px;
+    color:black;
   }
   #saves div{
     border-radius:5px;
