@@ -69,6 +69,8 @@ body{
 }
 #currentactivity{
     text-align:center;
+    font-size:3em;
+    margin-top:30px;
 }
 @keyframes slidein{
     100%{

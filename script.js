@@ -11,8 +11,24 @@ let currentrepeat = 0;
 let currentphase = "warmup";
 let workorrest = "work";
 let counter = 0;
+let ding = null;
 
-//ZEUS, MAKE A DINGY DING SOUND WHEN IT'S GONNA CHANGE PHASES AND MY LIFE IS YOURS!!!!!!!!!!!
+
+//make a dingy ding sound
+function sound(src) {
+    this.sound = document.createElement("audio");
+    this.sound.src = src;
+    this.sound.setAttribute("preload", "auto");
+    this.sound.setAttribute("controls", "none");
+    this.sound.style.display = "none";
+    document.body.appendChild(this.sound);
+    this.play = function(){
+      this.sound.play();
+    }
+    this.stop = function(){
+      this.sound.pause();
+    }
+  }
 
 //Sliding box code
 function menuOpen() {
@@ -39,7 +55,7 @@ function delay() {
 //end of sliding box code
 
 //countdown code, time is number of seconds you wish to count down
-async function countDown(time){
+function countDown(time){
     timer = time;
     //console.log(timer); //log to console current timer
     if(timer < 10){
@@ -55,6 +71,9 @@ function minusOne(){
     
     //document.getElementById("timerDisplay").innerHTML = timer;
     timer--;
+    if(timer == 3 || timer == 2 || timer == 1){
+        ding.play();
+    }
     if(timer <= 0){
         clearInterval(myInterval);
         document.getElementById("timerbox").innerHTML = "00";
@@ -115,9 +134,11 @@ document.getElementById("repeatslider").oninput = function() {
 }
 
 async function start() {
+    ding = new sound("sfx/dingding.mp3");
     if(currentphase == "warmup"){
         countDown(warmup);
         //make the warmup colors -----------------------------------
+        document.body.style.backgroundColor = "#118844"; //WARMUP COLORS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
         document.getElementById("sliders").style.display = "none";
         document.getElementById("savesmenu").style.display = "none";
         console.log("warming up");
@@ -132,11 +153,13 @@ async function start() {
             console.log("working");
             document.getElementById("currentactivity").innerHTML = "Workout";
             //make the work colors ------------------------------------
+            document.body.style.backgroundColor = "#991111";//WORKOUT COLOURS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
             }else if(workorrest == "rest"){
             countDown(rest);
             console.log("resting");
             document.getElementById("currentactivity").innerHTML = "Rest";
             //make the rest colors ------------------------------------
+            document.body.style.backgroundColor = "#AAAAAA";
             }
     }
     else if(currentphase == "cooldown"){
@@ -146,6 +169,7 @@ async function start() {
     document.getElementById("roundcounter").innerHTML = "";
     document.getElementById("currentactivity").innerHTML = "Cooldown";
     //make the cooldown colors --------------------------------------
+    document.body.style.backgroundColor = "#008899";//COOOOL DOWN COLOURS!!!!!!!!!!!!!!!!!!!!
     }
     else if(currentphase == "done"){
         console.log("done workout");
@@ -154,15 +178,20 @@ async function start() {
         document.getElementById("currentactivity").style.display = "none";
         currentphase = "warmup";
         currentrepeat = 0;
+        document.body.style.backgroundColor = "#FFFFFF";
         
     }
 }
 
 //all the saving code & variables
-let save1 = {warmup: 0, work: 0, rest: 0, repeat: 1, cooldown: 0}
-let save2 = {warmup: 0, work: 0, rest: 0, repeat: 1, cooldown: 0}
-let save3 = {warmup: 0, work: 0, rest: 0, repeat: 1, cooldown: 0}
-let save4 = {warmup: 0, work: 0, rest: 0, repeat: 1, cooldown: 0}
+let save1 = {warmup: 0, work: 0, rest: 0, repeat: 1, cooldown: 0, name:""}
+let save2 = {warmup: 0, work: 0, rest: 0, repeat: 1, cooldown: 0, name:""}
+let save3 = {warmup: 0, work: 0, rest: 0, repeat: 1, cooldown: 0, name:""}
+let save4 = {warmup: 0, work: 0, rest: 0, repeat: 1, cooldown: 0, name:""}
+let save1string = "";
+let save2string = "";
+let save3string = "";
+let save4string = "";
 
 function savesave(number){
     if(number == 1){
@@ -171,49 +200,62 @@ function savesave(number){
         save1.rest = rest;
         save1.repeat = repeat;
         save1.cooldown = cooldown;
+        save1.name = document.getElementById("save1name").value;
         document.getElementById("save1warmup").innerHTML = save1.warmup;
         document.getElementById("save1work").innerHTML = save1.work;
         document.getElementById("save1rest").innerHTML = save1.rest;
         document.getElementById("save1repeat").innerHTML = save1.repeat + "x";
         document.getElementById("save1cooldown").innerHTML = save1.cooldown;
+        save1string = JSON.stringify(save1);
+        localStorage.setItem(1, save1string);
     }else if(number == 2){
         save2.warmup = warmup;
         save2.work = work;
         save2.rest = rest;
         save2.repeat = repeat;
         save2.cooldown = cooldown;
+        save2.name = document.getElementById("save2name").value;
         document.getElementById("save2warmup").innerHTML = save2.warmup;
         document.getElementById("save2work").innerHTML = save2.work;
         document.getElementById("save2rest").innerHTML = save2.rest;
         document.getElementById("save2repeat").innerHTML = save2.repeat + "x";
         document.getElementById("save2cooldown").innerHTML = save2.cooldown;
+        save2string = JSON.stringify(save2);
+        localStorage.setItem(2, save2string);
     }else if(number == 3){
         save3.warmup = warmup;
         save3.work = work;
         save3.rest = rest;
         save3.repeat = repeat;
         save3.cooldown = cooldown;
+        save3.name = document.getElementById("save3name").value;
         document.getElementById("save3warmup").innerHTML = save3.warmup;
         document.getElementById("save3work").innerHTML = save3.work;
         document.getElementById("save3rest").innerHTML = save3.rest;
         document.getElementById("save3repeat").innerHTML = save3.repeat + "x";
         document.getElementById("save3cooldown").innerHTML = save3.cooldown;
+        save3string = JSON.stringify(save3);
+        localStorage.setItem(3, save3string);
     }else if(number == 4){ 
         save4.warmup = warmup;
         save4.work = work;
         save4.rest = rest;
         save4.repeat = repeat;
         save4.cooldown = cooldown;
+        save4.name = document.getElementById("save4name").value;
         document.getElementById("save4warmup").innerHTML = save4.warmup;
         document.getElementById("save4work").innerHTML = save4.work;
         document.getElementById("save4rest").innerHTML = save4.rest;
         document.getElementById("save4repeat").innerHTML = save4.repeat + "x";
         document.getElementById("save4cooldown").innerHTML = save4.cooldown;
+        save4string = JSON.stringify(save4);
+        localStorage.setItem(4, save4string);
     }
 }
 
 function loadsave(number){
     if(number == 1){
+        save1 = JSON.parse(localStorage.getItem(1));
         warmup = save1.warmup;
         work = save1.work;
         rest = save1.rest;
@@ -230,6 +272,7 @@ function loadsave(number){
         document.getElementById("repeatslider").value = save1.repeat;
         document.getElementById("cooldownslider").value = save1.cooldown;
     }else if(number == 2){
+        save2 = JSON.parse(localStorage.getItem(2));
         warmup = save2.warmup;
         work = save2.work;
         rest = save2.rest;
@@ -246,6 +289,7 @@ function loadsave(number){
         document.getElementById("repeatslider").value = save2.repeat;
         document.getElementById("cooldownslider").value = save2.cooldown;
     }else if(number == 3){
+        save3 = JSON.parse(localStorage.getItem(3));
         warmup = save3.warmup;
         work = save3.work;
         rest = save3.rest;
@@ -262,6 +306,7 @@ function loadsave(number){
         document.getElementById("repeatslider").value = save3.repeat;
         document.getElementById("cooldownslider").value = save3.cooldown;
     }else if(number == 4){
+        save4 = JSON.parse(localStorage.getItem(4));
         warmup = save4.warmup;
         work = save4.work;
         rest = save4.rest;
@@ -279,3 +324,8 @@ function loadsave(number){
         document.getElementById("cooldownslider").value = save4.cooldown;
     }
 }
+
+window.onload = function () {
+    //MAKE THE FUNCTIONS LOAD WHEN THE PAGE LOADS, SO YOU CAN SEE YOUR SAVED SAVES
+}
+
