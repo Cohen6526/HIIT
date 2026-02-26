@@ -11,12 +11,12 @@ body{
 
 
 #mainbody{
-    height:1000px;
+    height:1005px;
 }
 
 #foo{
     display:block;
-    background-color:rgb(0, 255, 204);
+    background-color:#04AA6D;
     transform:translateX(-40%);
     position:relative;
     height:100px;
@@ -36,10 +36,10 @@ body{
   }
 }
 #foo:hover{
-    background-color:rgb(11, 177, 144)
+    background-color:#0b6443;
 }
 #savesmenu{
-    background-color:rgb(0, 255, 204);
+    background-color:#04AA6D;
     transform:translate(101%, -1000px);
     height:740px;
     border-radius:5px;

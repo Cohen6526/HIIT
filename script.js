@@ -161,7 +161,7 @@ async function start() {
             console.log("resting");
             document.getElementById("currentactivity").innerHTML = "Rest";
             //make the rest colors ------------------------------------
-            document.body.style.backgroundColor = "#AAAAAA";
+            document.body.style.backgroundColor = "#AAAAFF";
             }
     }
     else if(currentphase == "cooldown"){
@@ -265,11 +265,11 @@ function loadsave(number){
         repeat = save1.repeat;
         cooldown = save1.cooldown;
         document.getElementById("save1name").value = save1.name;
-        document.getElementById("warmupcounter").innerHTML = save1.warmup;
-        document.getElementById("workcounter").innerHTML = save1.work;
-        document.getElementById("restcounter").innerHTML = save1.rest;
+        document.getElementById("warmupcounter").innerHTML = save1.warmup + "s";
+        document.getElementById("workcounter").innerHTML = save1.work + "s";
+        document.getElementById("restcounter").innerHTML = save1.rest + "s";
         document.getElementById("repeatcounter").innerHTML = save1.repeat + "x";
-        document.getElementById("cooldowncounter").innerHTML = save1.cooldown;
+        document.getElementById("cooldowncounter").innerHTML = save1.cooldown + "s";
         document.getElementById("warmupslider").value = save1.warmup;
         document.getElementById("workslider").value = save1.work;
         document.getElementById("restslider").value = save1.rest;
@@ -283,11 +283,11 @@ function loadsave(number){
         repeat = save2.repeat;
         cooldown = save2.cooldown;
         document.getElementById("save2name").value = save2.name;
-        document.getElementById("warmupcounter").innerHTML = save2.warmup;
-        document.getElementById("workcounter").innerHTML = save2.work;
-        document.getElementById("restcounter").innerHTML = save2.rest;
+        document.getElementById("warmupcounter").innerHTML = save2.warmup + "s";
+        document.getElementById("workcounter").innerHTML = save2.work + "s";
+        document.getElementById("restcounter").innerHTML = save2.rest + "s";
         document.getElementById("repeatcounter").innerHTML = save2.repeat + "x";
-        document.getElementById("cooldowncounter").innerHTML = save2.cooldown;
+        document.getElementById("cooldowncounter").innerHTML = save2.cooldown + "s";
         document.getElementById("warmupslider").value = save2.warmup;
         document.getElementById("workslider").value = save2.work;
         document.getElementById("restslider").value = save2.rest;
@@ -301,11 +301,11 @@ function loadsave(number){
         repeat = save3.repeat;
         cooldown = save3.cooldown;
         document.getElementById("save3name").value = save3.name;
-        document.getElementById("warmupcounter").innerHTML = save3.warmup;
-        document.getElementById("workcounter").innerHTML = save3.work;
-        document.getElementById("restcounter").innerHTML = save3.rest;
+        document.getElementById("warmupcounter").innerHTML = save3.warmup + "s";
+        document.getElementById("workcounter").innerHTML = save3.work + "s";
+        document.getElementById("restcounter").innerHTML = save3.rest + "s";
         document.getElementById("repeatcounter").innerHTML = save3.repeat + "x";
-        document.getElementById("cooldowncounter").innerHTML = save3.cooldown;
+        document.getElementById("cooldowncounter").innerHTML = save3.cooldown + "s";
         document.getElementById("warmupslider").value = save3.warmup;
         document.getElementById("workslider").value = save3.work;
         document.getElementById("restslider").value = save3.rest;
@@ -319,11 +319,11 @@ function loadsave(number){
         repeat = save4.repeat;
         cooldown = save4.cooldown;
         document.getElementById("save4name").value = save4.name;
-        document.getElementById("warmupcounter").innerHTML = save4.warmup;
-        document.getElementById("workcounter").innerHTML = save4.work;
-        document.getElementById("restcounter").innerHTML = save4.rest;
+        document.getElementById("warmupcounter").innerHTML = save4.warmup + "s";
+        document.getElementById("workcounter").innerHTML = save4.work + "s";
+        document.getElementById("restcounter").innerHTML = save4.rest + "s";
         document.getElementById("repeatcounter").innerHTML = save4.repeat + "x";
-        document.getElementById("cooldowncounter").innerHTML = save4.cooldown;
+        document.getElementById("cooldowncounter").innerHTML = save4.cooldown + "s";
         document.getElementById("warmupslider").value = save4.warmup;
         document.getElementById("workslider").value = save4.work;
         document.getElementById("restslider").value = save4.rest;
