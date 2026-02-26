@@ -12,6 +12,8 @@ let currentphase = "warmup";
 let workorrest = "work";
 let counter = 0;
 let ding = null;
+const AudioContext = window.AudioContext || window.webkitAudioContext;
+const audioCtx = new AudioContext();
 
 
 //make a dingy ding sound
