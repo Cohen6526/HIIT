@@ -12,8 +12,7 @@ let currentphase = "warmup";
 let workorrest = "work";
 let counter = 0;
 let ding = null;
-const AudioContext = window.AudioContext || window.webkitAudioContext;
-const audioCtx = new AudioContext();
+
 var soundWav = new Audio();
 
 soundWav.src="sfx/dingding.mp3";
@@ -61,7 +60,8 @@ function minusOne(){
     //document.getElementById("timerDisplay").innerHTML = timer;
     timer--;
     if(timer == 3 || timer == 2 || timer == 1){
-        soundWav.play()
+        soundWav.load();
+        soundWav.play();
     }
     if(timer <= 0){
         clearInterval(myInterval);
