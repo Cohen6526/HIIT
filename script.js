@@ -14,23 +14,10 @@ let counter = 0;
 let ding = null;
 const AudioContext = window.AudioContext || window.webkitAudioContext;
 const audioCtx = new AudioContext();
+var soundWav = new Audio();
 
+soundWav.src="sfx/dingding.mp3";
 
-//make a dingy ding sound
-async function sound(src) {
-    this.sound = document.createElement("audio");
-    this.sound.src = src;
-    this.sound.setAttribute("preload", "auto");
-    this.sound.setAttribute("controls", "none");
-    this.sound.style.display = "none";
-    document.body.appendChild(this.sound);
-    this.play = function(){
-      this.sound.play();
-    }
-    this.stop = function(){
-      this.sound.pause();
-    }
-  }
 
 //Sliding box code
 function menuOpen() {
@@ -74,7 +61,7 @@ function minusOne(){
     //document.getElementById("timerDisplay").innerHTML = timer;
     timer--;
     if(timer == 3 || timer == 2 || timer == 1){
-        ding.play();
+        soundWav.play()
     }
     if(timer <= 0){
         clearInterval(myInterval);
@@ -137,7 +124,6 @@ document.getElementById("repeatslider").oninput = function() {
 
 async function start() {
     window.scrollTo(0,0);
-    ding = new sound("sfx/dingding.mp3");
     if(currentphase == "warmup"){
         countDown(warmup);
         //make the warmup colors -----------------------------------
