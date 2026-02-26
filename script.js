@@ -17,7 +17,7 @@ const audioCtx = new AudioContext();
 
 
 //make a dingy ding sound
-function sound(src) {
+async function sound(src) {
     this.sound = document.createElement("audio");
     this.sound.src = src;
     this.sound.setAttribute("preload", "auto");
