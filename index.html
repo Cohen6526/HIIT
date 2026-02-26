@@ -15,6 +15,9 @@
         <div id="timerbox">00</div>
         <div id="roundcounter" class="labels"></div>
         <div id="sliders">
+            
+            <button type="button" onclick="start()" id="startbutton">Start Workout</button>
+            <br> <br>
             <div class="labels">Warmup</div>
             <input type="range" min="0" max="60" class="slider" id="warmupslider" value="30">
             <div id="warmupcounter" class="labels">30s</div>
@@ -34,8 +37,7 @@
             <div class="labels">Repeat</div>
             <input type="range" min="1" max="30" class="slider" id="repeatslider" value="1">
             <div id="repeatcounter" class="labels">1x</div>
-            <br>
-            <button type="button" onclick="start()" id="startbutton">Start Workout</button>
+            
         </div>
         
     </div>
