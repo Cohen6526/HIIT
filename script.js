@@ -134,6 +134,7 @@ document.getElementById("repeatslider").oninput = function() {
 }
 
 async function start() {
+    window.scrollTo(0,0);
     ding = new sound("sfx/dingding.mp3");
     if(currentphase == "warmup"){
         countDown(warmup);
@@ -149,6 +150,7 @@ async function start() {
             if(workorrest == "work"){
             countDown(work);
             counter++;
+            document.getElementById("roundcounter").style.display = "block";
             document.getElementById("roundcounter").innerHTML = "Round: " + counter + "/" + repeat;
             console.log("working");
             document.getElementById("currentactivity").innerHTML = "Workout";
@@ -167,6 +169,7 @@ async function start() {
     console.log("coolin down");
     counter = 0;
     document.getElementById("roundcounter").innerHTML = "";
+    document.getElementById("roundcounter").style.display = "none";
     document.getElementById("currentactivity").innerHTML = "Cooldown";
     //make the cooldown colors --------------------------------------
     document.body.style.backgroundColor = "#008899";//COOOOL DOWN COLOURS!!!!!!!!!!!!!!!!!!!!
@@ -261,6 +264,7 @@ function loadsave(number){
         rest = save1.rest;
         repeat = save1.repeat;
         cooldown = save1.cooldown;
+        document.getElementById("save1name").value = save1.name;
         document.getElementById("warmupcounter").innerHTML = save1.warmup;
         document.getElementById("workcounter").innerHTML = save1.work;
         document.getElementById("restcounter").innerHTML = save1.rest;
@@ -278,6 +282,7 @@ function loadsave(number){
         rest = save2.rest;
         repeat = save2.repeat;
         cooldown = save2.cooldown;
+        document.getElementById("save2name").value = save2.name;
         document.getElementById("warmupcounter").innerHTML = save2.warmup;
         document.getElementById("workcounter").innerHTML = save2.work;
         document.getElementById("restcounter").innerHTML = save2.rest;
@@ -295,6 +300,7 @@ function loadsave(number){
         rest = save3.rest;
         repeat = save3.repeat;
         cooldown = save3.cooldown;
+        document.getElementById("save3name").value = save3.name;
         document.getElementById("warmupcounter").innerHTML = save3.warmup;
         document.getElementById("workcounter").innerHTML = save3.work;
         document.getElementById("restcounter").innerHTML = save3.rest;
@@ -312,6 +318,7 @@ function loadsave(number){
         rest = save4.rest;
         repeat = save4.repeat;
         cooldown = save4.cooldown;
+        document.getElementById("save4name").value = save4.name;
         document.getElementById("warmupcounter").innerHTML = save4.warmup;
         document.getElementById("workcounter").innerHTML = save4.work;
         document.getElementById("restcounter").innerHTML = save4.rest;
@@ -326,6 +333,34 @@ function loadsave(number){
 }
 
 window.onload = function () {
-    //MAKE THE FUNCTIONS LOAD WHEN THE PAGE LOADS, SO YOU CAN SEE YOUR SAVED SAVES
+    save1 = JSON.parse(localStorage.getItem(1));
+        document.getElementById("save1name").value = save1.name;
+        document.getElementById("save1warmup").innerHTML = save1.warmup;
+        document.getElementById("save1work").innerHTML = save1.work;
+        document.getElementById("save1rest").innerHTML = save1.rest;
+        document.getElementById("save1repeat").innerHTML = save1.repeat + "x";
+        document.getElementById("save1cooldown").innerHTML = save1.cooldown;
+    save2 = JSON.parse(localStorage.getItem(2));
+        document.getElementById("save2name").value = save2.name;
+        document.getElementById("save2warmup").innerHTML = save2.warmup;
+        document.getElementById("save2work").innerHTML = save2.work;
+        document.getElementById("save2rest").innerHTML = save2.rest;
+        document.getElementById("save2repeat").innerHTML = save2.repeat + "x";
+        document.getElementById("save2cooldown").innerHTML = save2.cooldown;
+    save3 = JSON.parse(localStorage.getItem(3));
+        document.getElementById("save3name").value = save3.name;
+        document.getElementById("save3warmup").innerHTML = save3.warmup;
+        document.getElementById("save3work").innerHTML = save3.work;
+        document.getElementById("save3rest").innerHTML = save3.rest;
+        document.getElementById("save3repeat").innerHTML = save3.repeat + "x";
+        document.getElementById("save3cooldown").innerHTML = save3.cooldown;
+    save4 = JSON.parse(localStorage.getItem(4));
+        document.getElementById("save4name").value = save4.name;
+        document.getElementById("save4warmup").innerHTML = save4.warmup;
+        document.getElementById("save4work").innerHTML = save4.work;
+        document.getElementById("save4rest").innerHTML = save4.rest;
+        document.getElementById("save4repeat").innerHTML = save4.repeat + "x";
+        document.getElementById("save4cooldown").innerHTML = save4.cooldown;
+
 }
 

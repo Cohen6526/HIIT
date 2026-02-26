@@ -66,11 +66,26 @@ body{
 }
 #roundcounter{
     text-align:center;
+    font-size:2em;
+    margin:auto;
+    width:min-content;
+    padding:10px;
+    background-color:white;
+    border-radius:10px;
+    display:none;
 }
 #currentactivity{
     text-align:center;
     font-size:3em;
+    
+    background-color:white;
+    border-radius:10px;
+    display:block;
+    margin:auto;
     margin-top:30px;
+    width:min-content;
+    padding:20px;
+    display:none;
 }
 @keyframes slidein{
     100%{
@@ -123,7 +138,7 @@ body{
     display:grid;
     grid-template-areas:
       'name name name name'
-      'load load save save'
+      'save save load load'
       'warmup work rest cooldown'
       'warmup rep rep cooldown';
     gap:3px;
@@ -133,7 +148,7 @@ body{
     display:grid;
     grid-template-areas:
       'name name name name'
-      'load load save save'
+      'save save load load'
       'warmup work rest cooldown'
       'warmup rep rep cooldown';
     gap:3px;
@@ -143,7 +158,7 @@ body{
     display:grid;
     grid-template-areas:
       'name name name name'
-      'load load save save'
+      'save save load load'
       'warmup work rest cooldown'
       'warmup rep rep cooldown';
     gap:3px;
@@ -153,7 +168,7 @@ body{
     display:grid;
     grid-template-areas:
     'name name name name'
-    'load load save save'
+    'save save load load'
     'warmup work rest cooldown'
     'warmup rep rep cooldown';
     gap:3px;
