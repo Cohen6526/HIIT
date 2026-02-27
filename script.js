@@ -322,6 +322,7 @@ function loadsave(number){
 }
 
 window.onload = function () {
+    if(localStorage.getItem(1) != null){
     save1 = JSON.parse(localStorage.getItem(1));
         document.getElementById("save1name").value = save1.name;
         document.getElementById("save1warmup").innerHTML = save1.warmup;
@@ -329,6 +330,8 @@ window.onload = function () {
         document.getElementById("save1rest").innerHTML = save1.rest;
         document.getElementById("save1repeat").innerHTML = save1.repeat + "x";
         document.getElementById("save1cooldown").innerHTML = save1.cooldown;
+    }
+    if(localStorage.getItem(2) != null){
     save2 = JSON.parse(localStorage.getItem(2));
         document.getElementById("save2name").value = save2.name;
         document.getElementById("save2warmup").innerHTML = save2.warmup;
@@ -336,6 +339,8 @@ window.onload = function () {
         document.getElementById("save2rest").innerHTML = save2.rest;
         document.getElementById("save2repeat").innerHTML = save2.repeat + "x";
         document.getElementById("save2cooldown").innerHTML = save2.cooldown;
+    }
+    if(localStorage.getItem(3) != null){
     save3 = JSON.parse(localStorage.getItem(3));
         document.getElementById("save3name").value = save3.name;
         document.getElementById("save3warmup").innerHTML = save3.warmup;
@@ -343,6 +348,8 @@ window.onload = function () {
         document.getElementById("save3rest").innerHTML = save3.rest;
         document.getElementById("save3repeat").innerHTML = save3.repeat + "x";
         document.getElementById("save3cooldown").innerHTML = save3.cooldown;
+    }
+    if(localStorage.getItem(4) != null){
     save4 = JSON.parse(localStorage.getItem(4));
         document.getElementById("save4name").value = save4.name;
         document.getElementById("save4warmup").innerHTML = save4.warmup;
@@ -350,6 +357,7 @@ window.onload = function () {
         document.getElementById("save4rest").innerHTML = save4.rest;
         document.getElementById("save4repeat").innerHTML = save4.repeat + "x";
         document.getElementById("save4cooldown").innerHTML = save4.cooldown;
+    }
 
 }
 
