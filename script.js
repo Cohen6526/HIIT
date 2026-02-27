@@ -18,6 +18,7 @@ var soundWav = new Audio();
 soundWav.src="sfx/dingding.mp3";
 
 
+
 //Sliding box code
 function menuOpen() {
     if(lock == false){
@@ -27,10 +28,10 @@ function menuOpen() {
         }else if(ismenuopen == "true"){
             document.getElementById("savesmenu").style.animation = "slideout .5s ease-out";
         }
-        setTimeout(delay, 480,);
+        setTimeout(delay, 480);
     }
 }
-function delay() {
+delay = function () {
     if(ismenuopen == "false"){
         document.getElementById("savesmenu").style.transform = "translate(7%, -1000px)";
         ismenuopen = "true";
@@ -55,7 +56,7 @@ function countDown(time){
 
 }
 
-function minusOne(){
+minusOne = function (){
     
     //document.getElementById("timerDisplay").innerHTML = timer;
     timer--;

@@ -1,0 +1,14 @@
+{"theme_color":"#40ce51","background_color":"#40c337","icons":[{"purpose":"maskable","sizes":"512x512","src":"icons/icon512_maskable.png","type":"image/png"},{"purpose":"any","sizes":"512x512","src":"icons/icon512_rounded.png","type":"image/png"}],"orientation":"portrait","display":"standalone","dir":"auto","lang":"en-US","name":"HIIT Timer","short_name":"HIIT","start_url":"https://cohen6526.github.io/HIIT/","scope":"https://cohen6526.github.io/HIIT","description":"A high intensity interval training timer app!", "screenshots":[ 
+{
+  "src": "screenshots/screenshot1.png",
+  "sizes": "2393x1072",
+  "type": "image/png",
+  "form_factor": "wide",
+  "purpose": "any"
+},
+{
+  "src": "screenshots/screenshot2.png",
+  "sizes": "976x1080",
+  "type": "image/png",
+  "purpose": "any"
+}]}
