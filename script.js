@@ -125,7 +125,7 @@ document.getElementById("repeatslider").oninput = function() {
 
 async function start() {
     window.scrollTo(0,0);
-    document.body.style.overflow = "none";
+    document.getElementById("everythingbox").style.overflow = "none";
     if(currentphase == "warmup"){
         countDown(warmup);
         //make the warmup colors -----------------------------------
