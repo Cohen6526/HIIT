@@ -127,6 +127,7 @@ async function start() {
     window.scrollTo(0,0);
     document.getElementById("everythingbox").style.overflow = "none";
     document.getElementById("mainbody").style.height = "min-content";
+    document.body.style.touchAction = 'none';
     if(currentphase == "warmup"){
         countDown(warmup);
         //make the warmup colors -----------------------------------
@@ -177,6 +178,7 @@ async function start() {
         document.body.style.backgroundColor = "#FFFFFF";
         document.getElementById("everythingbox").style.overflow = "visible";
         document.getElementById("mainbody").style.height = "1005px";
+        document.body.style.touchAction = 'auto';
         
     }
 }
