@@ -125,6 +125,7 @@ document.getElementById("repeatslider").oninput = function() {
 
 async function start() {
     window.scrollTo(0,0);
+    document.body.style.overflow = "none";
     if(currentphase == "warmup"){
         countDown(warmup);
         //make the warmup colors -----------------------------------
@@ -145,12 +146,14 @@ async function start() {
             document.getElementById("currentactivity").innerHTML = "Workout";
             //make the work colors ------------------------------------
             document.body.style.backgroundColor = "#991111";//WORKOUT COLOURS!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+            document.getElementById("timerbox").style.color = "#FFFFFF";
             }else if(workorrest == "rest"){
             countDown(rest);
             console.log("resting");
             document.getElementById("currentactivity").innerHTML = "Rest";
             //make the rest colors ------------------------------------
             document.body.style.backgroundColor = "#AAAAFF";
+            document.getElementById("timerbox").style.color = "#000000";
             }
     }
     else if(currentphase == "cooldown"){
@@ -171,6 +174,7 @@ async function start() {
         currentphase = "warmup";
         currentrepeat = 0;
         document.body.style.backgroundColor = "#FFFFFF";
+        document.body.style.overflow = "visible";
         
     }
 }
