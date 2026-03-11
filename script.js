@@ -126,6 +126,7 @@ document.getElementById("repeatslider").oninput = function() {
 async function start() {
     window.scrollTo(0,0);
     document.getElementById("everythingbox").style.overflow = "none";
+    document.getElementById("mainbody").style.height = "min-content";
     if(currentphase == "warmup"){
         countDown(warmup);
         //make the warmup colors -----------------------------------
@@ -174,7 +175,8 @@ async function start() {
         currentphase = "warmup";
         currentrepeat = 0;
         document.body.style.backgroundColor = "#FFFFFF";
-        document.body.style.overflow = "visible";
+        document.getElementById("everythingbox").style.overflow = "visible";
+        document.getElementById("mainbody").style.height = "1005px";
         
     }
 }
