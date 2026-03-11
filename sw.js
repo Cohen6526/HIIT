@@ -1,4 +1,4 @@
-const version = 'v131';  // change this everytime you update the service worker
+const version = 'v132';  // change this everytime you update the service worker
                           // to force the browser to also update it.
 
 self.addEventListener('install', function(event) {

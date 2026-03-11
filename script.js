@@ -122,8 +122,18 @@ document.getElementById("repeatslider").oninput = function() {
     document.getElementById("repeatcounter").innerHTML = this.value + "x";
     repeat = this.value;
 }
+let wakelock = null;
 
 async function start() {
+    const requestWakeLock = async () => {
+        try {
+          wakeLock = await navigator.wakeLock.request('screen');
+          console.log('Screen Wake Lock active!');
+        } catch (err) {
+          // The request can be refused for reasons like low battery
+          console.error(`${err.name}, ${err.message}`);
+        }
+      };
     window.scrollTo(0,0);
     document.getElementById("everythingbox").style.overflow = "none";
     document.getElementById("mainbody").style.height = "min-content";
@@ -179,7 +189,13 @@ async function start() {
         document.getElementById("everythingbox").style.overflow = "visible";
         document.getElementById("mainbody").style.height = "1005px";
         document.body.style.touchAction = 'auto';
-        
+        const releaseWakeLock = () => {
+            if (wakeLock) {
+              wakeLock.release();
+              wakeLock = null;
+              console.log('Screen Wake Lock released!');
+            }
+          };
     }
 }
 
